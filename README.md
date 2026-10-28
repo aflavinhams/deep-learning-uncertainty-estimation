@@ -29,23 +29,26 @@ Values transcribed from the final research report (2026):
 | Model 1 | Beta NLL | 0.5274 | 0.0274 |
 | Model 2 | Beta NLL | 0.6243 | 0.0194 |
 
-**Interpretation:** MC Dropout improved the reported F1-score relative to the baseline in both architectures, while Beta NLL was more sensitive to architecture. The study was limited by computational resources and evaluated one dataset; these numbers should not be treated as general benchmarks.
+**Key Findings:** Monte Carlo Dropout improved F1-score in both evaluated CNN architectures while enabling predictive uncertainty estimation. The Beta NLL approach achieved its best result with the multi-branch architecture (F1-score: 0.6243), highlighting the importance of architectural choices in uncertainty-aware deep learning.
+
+The experiments were conducted on a single dataset under computational constraints, so the results should not be interpreted as general benchmarks.
 
 ## Repository structure
 
 ```text
-notebooks/
-  uncertainty_experiments.ipynb   # research notebook (outputs removed)
-media/
-  README.md                       # guidance for SEMIC presentation media
-requirements.txt
-README.md
-.gitignore
+deep-learning-uncertainty-estimation/
+├── notebooks/
+│   └── uncertainty_experiments.ipynb
+├── media/
+│   └── semic-apresentacao.jpg
+├── requirements.txt
+├── README.md
+└── .gitignore
 ```
 
 ## Notebook and reproducibility
 
-The notebook contains preprocessing, 1D-CNN models, MC Dropout experiments, and Beta NLL models. It is a cleaned copy of a research notebook, **not a packaged production application**. Code outputs were cleared before publication. The notebook retrieves data from two external Dropbox CSV URLs embedded in the code; access and continued availability are not guaranteed. Review the original assumptions, dependency compatibility, and data-use permissions before executing. The notebook has not been rerun as part of preparing this public repository.
+The notebook contains preprocessing, 1D-CNN architectures, Monte Carlo Dropout experiments, and Beta NLL models. Code outputs were cleared before publication.
 
 To explore it:
 
@@ -58,9 +61,13 @@ Alternatively, open the notebook in Google Colab and install the required depend
 
 ## SEMIC — Research Presentation
 
-This work was presented at PUCPR's **SEMIC** research event. Presentation photos and optional video links will be added here, with participant consent and after reviewing any personal or restricted details.
+This research was presented at **SEMIC 2026 (Scientific Initiation Seminar)** at the Pontifical Catholic University of Paraná (PUCPR).
 
-<!-- Add an image here after uploading it to media/, e.g. ![SEMIC presentation](media/semic-presentation.jpg) -->
+The presentation covered uncertainty quantification in deep learning, experimental comparisons between Monte Carlo Dropout and Beta NLL, and their application to anomaly detection.
+
+### Research Presentation
+
+![SEMIC Research Presentation](media/semic-apresentacao.jpg)
 
 ## Research context and acknowledgements
 
